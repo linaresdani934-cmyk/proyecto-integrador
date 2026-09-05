@@ -66,3 +66,10 @@ Persona <|-- Voluntario
 Persona <|-- Proveedor
 Persona <|-- Empleado
 ```
+## Pruebas realizadas
+
+- Se ejecutó `Main.java` correctamente.
+- Se comprobó el polimorfismo mediante referencias de tipo `Persona`.
+- Se verificó que cada subclase implementa `calcularBeneficioAnual()`.
+- Se agregó y probó el segundo método abstracto `describirBeneficio()`.
+- Se comprobó que el proyecto compila sin errores.
