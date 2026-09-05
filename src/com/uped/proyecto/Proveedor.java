@@ -14,7 +14,10 @@ public class Proveedor extends Persona {
     public double calcularBeneficioAnual() {
         return montoFacturado * 0.03;
     }
-
+    @Override
+    public String describirBeneficio() {
+        return "Beneficio del 3% sobre el monto facturado";
+    }
     @Override
     public String toString() {
         return presentarse();

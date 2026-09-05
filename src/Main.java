@@ -1,13 +1,6 @@
 
 package com.uped.proyecto;
 
-
-import com.uped.proyecto.Cliente;
-import com.uped.proyecto.Empleado;
-import com.uped.proyecto.Estudiante;
-import com.uped.proyecto.Persona;
-import com.uped.proyecto.Proveedor;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -20,10 +13,12 @@ public class Main {
         };
 
         for (Persona p : personas) {
-            System.out.println(p.presentarse() + " -> $"
-                    + p.calcularBeneficioAnual());
-
+            System.out.println(p.presentarse());
+            System.out.println("Beneficio: $" + p.calcularBeneficioAnual());
+            System.out.println(p.describirBeneficio());
+            System.out.println();
         }
+
         Proveedor prov = new Proveedor(
                 "Comercial Ríos",
                 "06554321-8",
@@ -33,6 +28,6 @@ public class Main {
         System.out.println(prov);
         System.out.println("Beneficio: "
                 + prov.calcularBeneficioAnual());
-
+        System.out.println(prov.describirBeneficio());
     }
 }

@@ -16,4 +16,8 @@ public class Cliente extends Persona {
     public double calcularBeneficioAnual() {
         return comprasAnuales * 0.05;
     }
+    @Override
+    public String describirBeneficio() {
+        return "Beneficio del 5% sobre las compras anuales";
+    }
 }

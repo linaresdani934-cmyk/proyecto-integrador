@@ -16,4 +16,8 @@ public class Docente extends Persona {
     public double calcularBeneficioAnual() {
         return aniosExperiencia * 45.0;
     }
+    @Override
+    public String describirBeneficio() {
+        return "Beneficio docente según los años de experiencia";
+    }
 }

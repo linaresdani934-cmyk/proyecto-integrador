@@ -18,4 +18,8 @@ public class Estudiante extends Persona {
     public double calcularBeneficioAnual() {
         return promedio >= 8.5 ? 500.0 : 0.0;
     }
+    @Override
+    public String describirBeneficio() {
+        return "Beneficio estudiantil según el promedio académico";
+    }
 }

@@ -36,4 +36,8 @@ public class Empleado extends Persona {
     public double calcularBeneficioAnual() {
         return salario * 0.10;
     }
+    @Override
+    public String describirBeneficio() {
+        return "Beneficio del 10% sobre el salario";
+    }
 }

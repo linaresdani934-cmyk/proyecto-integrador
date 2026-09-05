@@ -17,6 +17,7 @@ class Cliente {
     -double comprasAnuales
     +Cliente(String nombre, String dui, String telefono, double comprasAnuales)
     +double calcularBeneficioAnual()
+    +String describirBeneficio()
 }
 
 class Estudiante {
@@ -25,6 +26,7 @@ class Estudiante {
     -double promedio
     +Estudiante(String nombre, String dui, String carnet, String carrera, double promedio)
     +double calcularBeneficioAnual()
+    +String describirBeneficio()
 }
 
 class Docente {
@@ -32,18 +34,21 @@ class Docente {
     -int aniosExperiencia
     +Docente(String nombre, String dui, String especialidad, int aniosExperiencia)
     +double calcularBeneficioAnual()
+    +String describirBeneficio()
 }
 
 class Voluntario {
     -double horasServicio
     +Voluntario(String nombre, String dui, double horasServicio)
     +double calcularBeneficioAnual()
+    +String describirBeneficio()
 }
 
 class Proveedor {
     -double montoFacturado
     +Proveedor(String nombre, String dui, double montoFacturado)
     +double calcularBeneficioAnual()
+    +String describirBeneficio()
 }
 
 class Empleado {
@@ -51,6 +56,7 @@ class Empleado {
     -double salario
     +Empleado(int id, String nombre, String dui, double salario)
     +double calcularBeneficioAnual()
+    +String describirBeneficio()
 }
 
 Persona <|-- Cliente

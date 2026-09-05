@@ -14,7 +14,10 @@ public class Voluntario extends Persona {
     public double calcularBeneficioAnual() {
         return horasServicio * 2.0;
     }
-
+    @Override
+    public String describirBeneficio() {
+        return "Beneficio por horas de servicio voluntario";
+    }
     @Override
     public String toString() {
         return presentarse() + " | Horas: " + horasServicio;
