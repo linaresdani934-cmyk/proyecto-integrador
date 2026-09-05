@@ -1,4 +1,4 @@
-package com.uped.proyecto.modelo;
+package com.uped.proyecto;
 
 import java.util.ArrayList;
 import java.util.List;

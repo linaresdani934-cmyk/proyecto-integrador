@@ -1,4 +1,4 @@
-package com.uped.proyecto.modelo;
+package com.uped.proyecto;
 
 public class LibroBiblioteca {
 

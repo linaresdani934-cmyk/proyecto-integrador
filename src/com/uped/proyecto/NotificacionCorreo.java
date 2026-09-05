@@ -1,4 +1,4 @@
-package Modelo;
+package com.uped.proyecto;
 
 public class NotificacionCorreo {
 }

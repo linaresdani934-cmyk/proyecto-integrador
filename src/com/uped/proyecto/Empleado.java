@@ -1,12 +1,13 @@
-package com.uped.proyecto.modelo;
+package com.uped.proyecto;
 
-public class Empleado {
+public class Empleado extends Persona {
 
     private final int id;
-    private final String nombre;
     private final double salario;
 
-    public Empleado(int id, String nombre, double salario) {
+    public Empleado(int id, String nombre, String dui, double salario) {
+        super(nombre, dui);
+
         if (id <= 0) {
             throw new IllegalArgumentException("El id debe ser mayor a cero.");
         }
@@ -20,7 +21,6 @@ public class Empleado {
         }
 
         this.id = id;
-        this.nombre = nombre;
         this.salario = salario;
     }
 
@@ -28,20 +28,12 @@ public class Empleado {
         return id;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
     public double getSalario() {
         return salario;
     }
 
     @Override
-    public String toString() {
-        return "Empleado{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", salario=" + salario +
-                '}';
+    public double calcularBeneficioAnual() {
+        return salario * 0.10;
     }
 }
