@@ -1,4 +1,4 @@
-# Diagrama de clases - Semana 6
+# Diagrama de clases - Semana 7
 
 ```mermaid
 classDiagram
@@ -10,6 +10,7 @@ class Persona {
     +Persona(String nombre, String dui)
     +String presentarse()
     +double calcularBeneficioAnual()
+    +String describirBeneficio()
 }
 
 class Cliente {
@@ -59,12 +60,31 @@ class Empleado {
     +String describirBeneficio()
 }
 
+    class Gerente {
+        -int tamanoEquipo
+        +Gerente(int id, String nombre, String dui, double salario, int tamanoEquipo)
+        +int getTamanoEquipo()
+        +double calcularBeneficioAnual()
+        +String toString()
+    }
+
+    class DocenteInvestigador {
+        -int numeroPublicaciones
+        +DocenteInvestigador(String nombre, String dui, String especialidad, int aniosExperiencia, int numeroPublicaciones)
+        +double calcularBeneficioAnual()
+        +String toString()
+    }
+
 Persona <|-- Cliente
 Persona <|-- Estudiante
 Persona <|-- Docente
 Persona <|-- Voluntario
 Persona <|-- Proveedor
 Persona <|-- Empleado
+Persona <|-- Empleado
+Empleado <|-- Gerente
+Persona <|-- Docente
+Docente <|-- DocenteInvestigador
 ```
 ## Pruebas realizadas
 
