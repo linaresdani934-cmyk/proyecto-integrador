@@ -1,4 +1,4 @@
-# Diagrama de clases - Semana 7
+# Diagrama de clases - Semana 8
 
 ```mermaid
 classDiagram
