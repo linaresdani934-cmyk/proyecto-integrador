@@ -85,6 +85,35 @@ Persona <|-- Empleado
 Empleado <|-- Gerente
 Persona <|-- Docente
 Docente <|-- DocenteInvestigador
+    class Notificacion {
+        <<abstract>>
+        #String destinatario
+        #String mensaje
+        #List~String~ historial
+        +Notificacion(String destinatario, String mensaje)
+        +void enviar()
+        +void registrarHistorial(String registro)
+        +void mostrarHistorial()
+    }
+
+    class NotificacionCorreo {
+        +NotificacionCorreo(String destinatario, String mensaje)
+        +void enviar()
+    }
+
+    class NotificacionSMS {
+        +NotificacionSMS(String destinatario, String mensaje)
+        +void enviar()
+    }
+
+    class NotificacionPush {
+        +NotificacionPush(String destinatario, String mensaje)
+        +void enviar()
+    }
+
+    Notificacion <|-- NotificacionCorreo
+    Notificacion <|-- NotificacionSMS
+    Notificacion <|-- NotificacionPush
 ```
 ## Pruebas realizadas
 

@@ -71,5 +71,33 @@ public class Main {
         System.out.println("Beneficio: "
                 + prov.calcularBeneficioAnual());
         System.out.println(prov.describirBeneficio());
+
+        NotificacionCorreo correo = new NotificacionCorreo(
+                "dani@ejemplo.com",
+                "Hola, esta es una prueba por correo."
+        );
+
+        NotificacionSMS sms = new NotificacionSMS(
+                "7777-1234",
+                "Hola, esta es una prueba por SMS."
+        );
+
+        NotificacionPush push = new NotificacionPush(
+                "Dani",
+                "Hola, esta es una notificación Push."
+        );
+
+        correo.enviar();
+        sms.enviar();
+        push.enviar();
+
+        System.out.println("\nHistorial del correo:");
+        correo.mostrarHistorial();
+
+        System.out.println("\nHistorial del SMS:");
+        sms.mostrarHistorial();
+
+        System.out.println("\nHistorial del Push:");
+        push.mostrarHistorial();
     }
 }
